@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5992b1af-fd0c-4cc9-963d-aa8a158f2e1d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/church_project/interfaces/UtilisateurInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/church_project/interfaces/UserInterface.java" afterDir="false" />
+    <list default="true" id="5992b1af-fd0c-4cc9-963d-aa8a158f2e1d" name="Changes" comment="update_user template FXML">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/church_project/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/church_project/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/church_project/hello-view.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/church_project/login_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/church_project/login_form.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,9 +84,22 @@
       <workItem from="1741876773862" duration="7172000" />
       <workItem from="1742284371466" duration="1386000" />
     </task>
+    <task id="LOCAL-00001" summary="update_user template FXML">
+      <option name="closed" value="true" />
+      <created>1742985041280</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1742985041280</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update_user template FXML" />
+    <option name="LAST_COMMIT_MESSAGE" value="update_user template FXML" />
   </component>
 </project>

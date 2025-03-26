@@ -14,7 +14,7 @@ public class User implements UserInterface {
     private int IdUser;
     private String nomUser;
     private String prenomUser;
-    private String emailUser;
+    private String usernameUser;
     private String passwordUser;
     private String roleUser;
     private Connection connection;
@@ -33,12 +33,12 @@ public class User implements UserInterface {
         this.nomUser = nomUser;
     }
 
-    public String getEmailUser() {
-        return emailUser;
+    public String getUsernameUser() {
+        return usernameUser;
     }
 
-    public void setEmailUser(String emailUser) {
-        this.emailUser = emailUser;
+    public void setUsernameUser(String usernameUser) {
+        this.usernameUser = usernameUser;
     }
 
     public String getPasswordUser() {
@@ -70,9 +70,9 @@ public class User implements UserInterface {
 
     }
 
-    public User(int IdUser,  String emailUser, String passwordUser, String roleUser) {
+    public User(int IdUser, String usernameUser, String passwordUser, String roleUser) {
         this.IdUser = IdUser;
-        this.emailUser = emailUser;
+        this.usernameUser = usernameUser;
         this.passwordUser = passwordUser;
         this.roleUser = roleUser;
 
@@ -90,7 +90,7 @@ public class User implements UserInterface {
             while (resultSet.next()) {
                 User user = new User();
                 user.setIdUser(resultSet.getInt("IdUser"));
-                user.setEmailUser(resultSet.getString("emailUser"));
+                user.setUsernameUser(resultSet.getString("emailUser"));
                 user.setPasswordUser(resultSet.getString("passwordUser"));
 
                 users.add(user);
@@ -107,6 +107,22 @@ public class User implements UserInterface {
 
     @Override
     public void register(User user) throws SQLException {
+        connection = IDBConfig.getConnection();
+        if (connection != null) {
+            String req = "INSERT INTO user (nomUser, prenomUser,usernameUser, password) VALUES (?, ?, ?, ?)";
+            PreparedStatement preparedStatement = this.connection.prepareStatement(req);
+
+            preparedStatement.setString(1,user.getNomUser());
+            preparedStatement.setString(2, user.getPrenomUser());
+            preparedStatement.setString(3, user.getUsernameUser());
+            preparedStatement.setString(4, user.getPasswordUser());
+
+            int row = preparedStatement.executeUpdate();
+            System.out.println(String.valueOf(row));
+
+            preparedStatement.close();;
+            this.connection.close();
+        }
 
 
     }
