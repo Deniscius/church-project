@@ -6,15 +6,64 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="464.0" prefWidth="666.0"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.church_project.LoginController"
+            stylesheets="@styles.css">
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <TextField layoutX="300.0" layoutY="162.0" prefWidth="230.0" />
-      <PasswordField layoutX="300.0" layoutY="231.0" prefWidth="230.0" />
-      <Button layoutX="478.0" layoutY="270.0" mnemonicParsing="false" text="Valider" />
-      <Hyperlink layoutX="294.0" layoutY="271.0" text="Hyperlink" />
-      <Label layoutX="300.0" layoutY="141.0" text="Identifiants" />
-      <Label layoutX="300.0" layoutY="207.0" text="Mot de passe" />
-   </children>
+   <!-- Sidebar bleu -->
+   <VBox prefHeight="464.0" prefWidth="215.0"
+         style="-fx-background-color: #3185FC;"/>
+
+   <!-- Titre principal -->
+   <Label layoutX="300.0" layoutY="100.0"
+          text="Connectez-vous"
+          styleClass="header-title">
+      <font>
+         <Font name="System Bold" size="23.0" />
+      </font>
+   </Label>
+
+   <!-- Section Identifiant -->
+   <Label layoutX="304.0" layoutY="199.0"
+          text="Nom d'utilisateur"
+          styleClass="input-label"/>
+   <TextField fx:id="usernameTextField"
+              layoutX="304.0" layoutY="220.0"
+              prefHeight="26.0" prefWidth="254.0"
+              promptText="Saisissez votre identifiant"
+              styleClass="text-field"/>
+
+   <!-- Section Mot de passe -->
+   <Label layoutX="304.0" layoutY="265.0"
+          text="Mot de passe"
+          styleClass="input-label"/>
+   <PasswordField fx:id="passwordTextField"
+                  layoutX="304.0" layoutY="289.0"
+                  prefHeight="26.0" prefWidth="254.0"
+                  promptText="Saisissez votre mot de passe"
+                  styleClass="password-field"/>
+
+   <!-- Section inscription -->
+   <Label layoutX="299.0" layoutY="367.0"
+          text="Pas encore inscrit ? "
+          styleClass="info-text"/>
+   <Hyperlink layoutX="465.0" layoutY="364.0"
+              text="Inscrivez-vous"
+              onAction="#switchToRegister"
+              styleClass="hyperlink"/>
+
+   <!-- Bouton de connexion -->
+   <Button layoutX="396.0" layoutY="412.0"
+           mnemonicParsing="false"
+           onAction="#onLoginButton"
+           text="Connexion"
+           styleClass="primary-button"/>
+
 </AnchorPane>

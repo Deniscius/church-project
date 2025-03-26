@@ -1,7 +1,7 @@
 package com.example.church_project.models;
 
 import com.example.church_project.dbConfig.IDBConfig;
-import com.example.church_project.interfaces.UtilisateurInterface;
+import com.example.church_project.interfaces.UserInterface;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.sql.Connection;
 
-public class User implements UtilisateurInterface {
+public class User implements UserInterface {
     private int IdUser;
     private String nomUser;
     private String prenomUser;
@@ -96,8 +96,12 @@ public class User implements UtilisateurInterface {
                 users.add(user);
             }
 
+            preparedStatement.close();
+            this.connection.close();
+
         }
 
+        return users;
 
     }
 
