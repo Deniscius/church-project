@@ -124,13 +124,30 @@ public class User implements UserInterface {
             this.connection.close();
         }
 
-
     }
 
     @Override
     public boolean login(String username, String password) throws SQLException {
+            int rows = 0;
+            if (connection != null) {
+                String req = "SELECT * FROM User WHERE usernameUser = ? AND passwordUser = ?";
 
-        return false;
+                PreparedStatement preparedStatement = this.connection.prepareStatement(req);
+
+                preparedStatement.setString(1, getUsernameUser());
+                preparedStatement.setString(2, getUsernameUser());
+
+                ResultSet resultSet = preparedStatement.executeQuery();
+
+                while (resultSet.next()) {
+                    rows ++;
+                }
+
+                preparedStatement.close();
+                this.connection.close();
+            }
+
+        return rows > 0;
     }
 
 }
