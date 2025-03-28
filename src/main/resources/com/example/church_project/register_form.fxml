@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="666.0"  xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.church_project.controllers.AuthController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="666.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.church_project.controllers.AuthController">
 
    <!-- Sidebar bleu -->
    <VBox prefHeight="464.0" prefWidth="215.0" style="-fx-background-color: #3185FC;" />
@@ -30,15 +30,16 @@
    <PasswordField fx:id="passwordTextField" layoutX="304.0" layoutY="286.0" prefHeight="26.0" prefWidth="254.0" promptText="Saisissez votre mot de passe" styleClass="password-field" />
 
    <!-- Section inscription -->
-   <Label layoutX="299.0" layoutY="337.0" styleClass="info-text" text="Pas encore membre" />
-   <Hyperlink layoutX="448.0" layoutY="337.0" onAction="#onLoginForm" prefHeight="24.0" prefWidth="123.0" styleClass="hyperlink" text="Connectez - vous" />
+   <Label layoutX="299.0" layoutY="337.0" styleClass="info-text" text="Déjà membre ?" />
 
    <!-- Bouton de connexion -->
-   <Button fx:id="loginButton" layoutX="472.0" layoutY="388.0" mnemonicParsing="false" onAction="#onLoginButton" styleClass="primary-button" text="Connexion" />
+   <Button layoutX="472.0" layoutY="388.0" mnemonicParsing="false" onAction="#onRegisterButton" styleClass="primary-button" text="Connexion" />
    <Label layoutX="302.0" layoutY="77.0" styleClass="input-label" text="Nom" />
    <TextField fx:id="nameTextField" layoutX="303.0" layoutY="102.0" prefHeight="26.0" prefWidth="254.0" promptText="Saisissez votre nom" styleClass="text-field" />
    <Label layoutX="304.0" layoutY="137.0" styleClass="input-label" text="Prénoms" />
    <TextField fx:id="lastNameTextField" layoutX="304.0" layoutY="160.0" prefHeight="26.0" prefWidth="254.0" promptText="Saisissez votre prénom" styleClass="text-field" />
-   <Button fx:id="buttonClear" layoutX="304.0" layoutY="388.0" mnemonicParsing="false" onAction="#onClearButton" styleClass="primary-button" text="Annuler" />
+   <Button layoutX="304.0" layoutY="388.0" mnemonicParsing="false" onAction="#onClearButton" styleClass="primary-button" text="Annuler" />
+   <Hyperlink text="Hyperlink" />
+   <Hyperlink layoutX="451.0" layoutY="334.0" onAction="#onSwitchLogin" text="Connectez-vous" />
 
 </AnchorPane>

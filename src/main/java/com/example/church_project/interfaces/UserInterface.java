@@ -7,6 +7,6 @@ import java.util.List;
 
 public interface UserInterface {
     List<User> list() throws SQLException;
-    void register(User user) throws SQLException;
+    void register() throws SQLException;
     boolean login(String username, String password) throws SQLException;
 }
