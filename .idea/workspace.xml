@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5992b1af-fd0c-4cc9-963d-aa8a158f2e1d" name="Changes" comment="User_complete">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+    <list default="true" id="5992b1af-fd0c-4cc9-963d-aa8a158f2e1d" name="Changes" comment="User_config dim 30/03/25">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/church_bd" beforeDir="false" afterPath="$PROJECT_DIR$/church_bd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/church_bd-journal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church_bd.db" beforeDir="false" afterPath="$PROJECT_DIR$/church_bd.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +56,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Application.AppBase.executor": "Run",
     "Application.HelloApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -119,7 +116,7 @@
       <updated>1741876770329</updated>
       <workItem from="1741876773862" duration="7172000" />
       <workItem from="1742284371466" duration="1386000" />
-      <workItem from="1743317709583" duration="1938000" />
+      <workItem from="1743317709583" duration="2687000" />
     </task>
     <task id="LOCAL-00001" summary="update_user template FXML">
       <option name="closed" value="true" />
@@ -161,7 +158,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743095679704</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="User_config dim 30/03/25">
+      <option name="closed" value="true" />
+      <created>1743319921884</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1743319921884</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,6 +176,7 @@
     <MESSAGE value="update_user template FXML" />
     <MESSAGE value="add register method on User class" />
     <MESSAGE value="User_complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="User_complete" />
+    <MESSAGE value="User_config dim 30/03/25" />
+    <option name="LAST_COMMIT_MESSAGE" value="User_config dim 30/03/25" />
   </component>
 </project>
