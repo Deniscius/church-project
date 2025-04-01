@@ -55,7 +55,6 @@ public class AuthController {
     }
 
 
-
     @FXML
     private void onLoginButton() throws IOException{
 

@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5992b1af-fd0c-4cc9-963d-aa8a158f2e1d" name="Changes" comment="User_config dim 30/03/25">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c1a3a459-2be1-4bd4-b45f-5e59b6f540ee.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c1a3a459-2be1-4bd4-b45f-5e59b6f540ee/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/church_project/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/church_project/controllers/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/church_project/register_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/church_project/register_form.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,12 +33,12 @@
     &quot;assignee&quot;: &quot;Deniscius&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Deniscius/church-project.git",
-    "accountId": "55f7f5e8-b3c5-4c8e-aa88-65a0de9ac360"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Deniscius/church-project.git&quot;,
+    &quot;accountId&quot;: &quot;55f7f5e8-b3c5-4c8e-aa88-65a0de9ac360&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -64,7 +67,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/eyram-adjevi/Documents/church-project/src/main/resources/com/example/church_project",
+    "last_opened_file_path": "D:/Projects/Java/church-project",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -87,17 +90,6 @@
       <recent name="$PROJECT_DIR$/src/main/resources/com/example/church_project" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -117,6 +109,7 @@
       <workItem from="1741876773862" duration="7172000" />
       <workItem from="1742284371466" duration="1386000" />
       <workItem from="1743317709583" duration="2687000" />
+      <workItem from="1743520513302" duration="1256000" />
     </task>
     <task id="LOCAL-00001" summary="update_user template FXML">
       <option name="closed" value="true" />
