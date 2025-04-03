@@ -50,7 +50,6 @@ public class UserDAO {
         }
     }
 
-    // Méthode ajoutée pour vérifier la disponibilité du nom d'utilisateur
     public boolean isUsernameAvailable(String username) throws SQLException {
         String sql = "SELECT COUNT(*) FROM User WHERE usernameUser = ?";
 
@@ -60,6 +59,29 @@ public class UserDAO {
             ps.setString(1, username);
             try (ResultSet rs = ps.executeQuery()) {
                 return rs.next() && rs.getInt(1) == 0; // True si le compte n'existe pas
+            }
+        }
+    }
+
+    public User findByUsername(String username) throws SQLException {
+        String sql = "SELECT * FROM User WHERE usernameUser = ?";
+
+        try (Connection conn = DBConfig.getConnection();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+
+            ps.setString(1, username);
+
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
+                    return new User(
+                            rs.getInt("IdUser"),
+                            rs.getString("usernameUser"),
+                            rs.getString("passwordUser"),
+                            rs.getString("nomUser"),
+                            rs.getString("prenomUser")
+                    );
+                }
+                return null;
             }
         }
     }
