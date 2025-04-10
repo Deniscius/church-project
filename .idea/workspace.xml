@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5992b1af-fd0c-4cc9-963d-aa8a158f2e1d" name="Changes" comment="refonte architecture complète">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/church_bd" beforeDir="false" afterPath="$PROJECT_DIR$/church_bd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/church_project/AppBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/church_project/AppBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/church_project/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/church_project/controllers/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/church_project/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/church_project/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/church_project/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/church_project/models/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/church_project/services/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/church_project/services/AuthService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +37,7 @@
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/Deniscius/church-project.git",
-    "accountId": "ffb9940b-dbb8-46b4-9590-ea283a2ffc29"
+    "accountId": "55f7f5e8-b3c5-4c8e-aa88-65a0de9ac360"
   }
 }]]></component>
   <component name="MavenImportPreferences">
@@ -91,6 +94,14 @@
       <recent name="com.example.church_project" />
     </key>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -103,6 +114,7 @@
       <workItem from="1742284371466" duration="1386000" />
       <workItem from="1743317709583" duration="2687000" />
       <workItem from="1743520513302" duration="1256000" />
+      <workItem from="1744316933717" duration="2509000" />
     </task>
     <task id="LOCAL-00001" summary="update_user template FXML">
       <option name="closed" value="true" />

@@ -8,6 +8,8 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import com.example.church_project.models.User;
 
+import static java.lang.Character.isAlphabetic;
+
 public class AuthController {
 
     @FXML private TextField lastNameTextField;
@@ -25,14 +27,32 @@ public class AuthController {
         String username = usernameTextField.getText().trim();
         String password = passwordTextField.getText().trim();
 
-        if (validateFields(nom, prenom, username, password)) {
-            User user = new User(username, password, nom, prenom);
+        // Vérification que tous les champs sont remplis
+        if (!validateFields(nom, prenom, username, password)) return;
 
-            if (authService.register(user)) {
-                showSuccessAndNavigate("Inscription réussie !", "login_form.fxml");
-            } else {
-                AlertUtils.showError("Échec de l'inscription - Nom d'utilisateur déjà pris");
-            }
+        // Vérification que nom et prénom ne contiennent que des lettres
+        if (!isAlphabetic(nom) || !isAlphabetic(prenom)) {
+            AlertUtils.showError("Le nom et le prénom doivent contenir uniquement des lettres.");
+            return;
+        }
+
+        // Vérification que le mot de passe est fort
+        if (!isStrongPassword(password)) {
+            AlertUtils.showError("Le mot de passe doit contenir au moins 8 caractères, une majuscule, une minuscule, un chiffre et un caractère spécial.");
+            return;
+        }
+
+        // Mise en majuscule du nom
+        nom = nom.toUpperCase();
+
+        // Création de l'utilisateur
+        User user = new User(username, password, nom, prenom);
+
+        // Enregistrement
+        if (authService.register(user)) {
+            showSuccessAndNavigate("Inscription réussie !", "login_form.fxml");
+        } else {
+            AlertUtils.showError("Échec de l'inscription - Nom d'utilisateur déjà pris");
         }
     }
 
@@ -65,17 +85,15 @@ public class AuthController {
     @FXML
     private void onClearButton() {  }
 
-
     private boolean validateFields(String... fields) {
         for (String field : fields) {
             if (field.isEmpty()) {
-                AlertUtils.showError("Tous les champs doivent être remplis");
+                AlertUtils.showError("Tous les champs doivent être remplis.");
                 return false;
             }
         }
         return true;
     }
-
 
     private void clearFields() {
         usernameTextField.clear();
@@ -88,5 +106,15 @@ public class AuthController {
         AlertUtils.showInfo(message);
         SceneUtils.loadScene(fxmlPath);
         clearFields();
+    }
+
+    private boolean isAlphabetic(String input) {
+        return input.matches("^[a-zA-ZÀ-ÿ\\s'-]+$");
+    }
+
+
+    private boolean isStrongPassword(String password) {
+        String regex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$";
+        return password.matches(regex);
     }
 }

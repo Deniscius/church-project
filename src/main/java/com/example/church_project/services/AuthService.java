@@ -7,20 +7,19 @@ import java.sql.SQLException;
 
 public class AuthService {
     private final UserDAO userDAO = new UserDAO();
-    private User currentUser; // Utilisateur actuellement connecté
+    private User currentUser;
 
     public boolean register(User user) {
         try {
-            // Vérification de la disponibilité du username
+
             if (!userDAO.isUsernameAvailable(user.getUsernameUser())) {
                 return false;
             }
 
-            // Hachage du mot de passe
             String hashedPassword = BCrypt.hashpw(user.getPasswordUser(), BCrypt.gensalt());
             user.setPasswordUser(hashedPassword);
 
-            // Enregistrement en base
+
             userDAO.register(user);
             return true;
         } catch (SQLException e) {
@@ -35,7 +34,7 @@ public class AuthService {
             if (user == null) return false;
 
             if (BCrypt.checkpw(password, user.getPasswordUser())) {
-                currentUser = user; // Stocke l'utilisateur connecté
+                currentUser = user;
                 return true;
             }
             return false;

@@ -26,7 +26,7 @@ public class User {
         this.prenomUser = prenomUser;
     }
 
-    // Getters et Setters (gardez les validations)
+
     public int getIdUser() {
         return IdUser;
     }
