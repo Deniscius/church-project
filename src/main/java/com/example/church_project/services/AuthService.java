@@ -11,14 +11,19 @@ public class AuthService {
 
     public boolean register(User user) {
         try {
-
             if (!userDAO.isUsernameAvailable(user.getUsernameUser())) {
                 return false;
             }
 
+            // Hachage du mot de passe
             String hashedPassword = BCrypt.hashpw(user.getPasswordUser(), BCrypt.gensalt());
             user.setPasswordUser(hashedPassword);
 
+            // Détecter s'il s'agit du premier utilisateur
+            boolean isFirstUser = userDAO.countUsers() == 0;
+
+            // Attribution automatique du rôle
+            user.setRoleUser(isFirstUser ? "SUPER_ADMIN" : "USER");
 
             userDAO.register(user);
             return true;
@@ -30,10 +35,8 @@ public class AuthService {
 
     public boolean login(String username, String password) {
         try {
-            User user = userDAO.findByUsername(username);
-            if (user == null) return false;
-
-            if (BCrypt.checkpw(password, user.getPasswordUser())) {
+            User user = userDAO.login(username, password);
+            if (user != null) {
                 currentUser = user;
                 return true;
             }
@@ -43,6 +46,7 @@ public class AuthService {
             return false;
         }
     }
+
 
     public void logout() {
         currentUser = null;

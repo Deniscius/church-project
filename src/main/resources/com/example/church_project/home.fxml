@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="949.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.church_project.controllers.HomeController">
+   <children>
+      <VBox prefHeight="600.0" prefWidth="300.0" style="-fx-background-color: #3185FC;">
+         <children>
+            <Label text="TABLEAU DE BORD" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="25.0" left="60.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Button mnemonicParsing="false" style="-fx-background-color: transparent;">
+               <graphic>
+                  <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="144.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../assets/images/home.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Home" wrappingWidth="69.49543762207031">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+               </graphic>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="10.0" top="5.0" />
+               </padding>
+            </Button>
+            <Button layoutX="10.0" layoutY="97.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+               <graphic>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../assets/images/products.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des Produits" wrappingWidth="136.162109375">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+               </graphic>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="10.0" top="5.0" />
+               </padding>
+            </Button>
+            <Button layoutX="10.0" layoutY="137.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+               <graphic>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../assets/images/categories.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des categories" wrappingWidth="137.4954376220703">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+               </graphic>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="10.0" top="5.0" />
+               </padding>
+            </Button>
+            <Button layoutX="10.0" layoutY="177.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+               <graphic>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../assets/images/cart.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des ventes" wrappingWidth="134.8287811279297">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+               </graphic>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="10.0" top="5.0" />
+               </padding>
+            </Button>
+            <Button layoutX="10.0" layoutY="217.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+               <graphic>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../assets/images/stats.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Statisques des ventes" wrappingWidth="148.162109375">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+               </graphic>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="10.0" top="5.0" />
+               </padding>
+            </Button>
+            <Button layoutX="10.0" layoutY="257.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+               <graphic>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../assets/images/settings.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Paramètres" wrappingWidth="132.162109375">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+               </graphic>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="10.0" top="5.0" />
+               </padding>
+            </Button>
+            <Button layoutX="10.0" layoutY="297.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+               <graphic>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../assets/images/user.png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="onClickUserManage" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion de compte utilisateur" wrappingWidth="204.16209411621094">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+               </graphic>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="10.0" top="5.0" />
+               </padding>
+            </Button>
+            <Button layoutX="10.0" layoutY="345.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+               <graphic>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../assets/images/help.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Obtenir de l'aide" wrappingWidth="204.16209411621094">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+               </graphic>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="10.0" top="5.0" />
+               </padding>
+            </Button>
+         </children>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+      </VBox>
+      <StackPane fx:id="contentAreatStackPane">
+         <HBox.margin>
+            <Insets right="10.0" />
+         </HBox.margin>
+      </StackPane>
+   </children>
+</HBox>

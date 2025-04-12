@@ -4,13 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5992b1af-fd0c-4cc9-963d-aa8a158f2e1d" name="Changes" comment="refonte architecture complète">
+    <list default="true" id="5992b1af-fd0c-4cc9-963d-aa8a158f2e1d" name="Changes" comment="complete user">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/church_project/controllers/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/church_project/controllers/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/church_project/controllers/SuperAdminDashboardController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/church_project/models/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/church_project/services/SuperAdminSeeder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/images/cart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/images/categories.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/images/help.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/images/home.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/images/logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/images/products.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/images/settings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/images/stats.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/images/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/church_project/home.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/church_project/super_admin_dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4bfd4054-869f-4501-b0c7-042917afdf54.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4bfd4054-869f-4501-b0c7-042917afdf54.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/church_bd" beforeDir="false" afterPath="$PROJECT_DIR$/church_bd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/church_project/AppBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/church_project/AppBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/church_project/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/church_project/controllers/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/church_project/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/church_project/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/church_project/controllers/AuthController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/church_project/controllers/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/church_project/controllers/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/church_project/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/church_project/dao/UserDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/church_project/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/church_project/models/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/church_project/services/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/church_project/services/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/church_project/login_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/church_project/login_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/church_project/register_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/church_project/register_form.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +43,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -34,12 +57,12 @@
     &quot;assignee&quot;: &quot;Deniscius&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Deniscius/church-project.git",
-    "accountId": "55f7f5e8-b3c5-4c8e-aa88-65a0de9ac360"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Deniscius/church-project.git&quot;,
+    &quot;accountId&quot;: &quot;55f7f5e8-b3c5-4c8e-aa88-65a0de9ac360&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -68,7 +91,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Projects/Java/church-project&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Projects/Java/BriefI&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -88,6 +111,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\Java\church-project\src\main\resources\com\example\church_project" />
+      <recent name="D:\Projects\Java\church-project\src\main\resources\assets\images" />
       <recent name="$PROJECT_DIR$/src/main/resources/com/example/church_project" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -114,7 +139,13 @@
       <workItem from="1742284371466" duration="1386000" />
       <workItem from="1743317709583" duration="2687000" />
       <workItem from="1743520513302" duration="1256000" />
-      <workItem from="1744316933717" duration="2509000" />
+      <workItem from="1744316933717" duration="9868000" />
+      <workItem from="1744356266847" duration="4483000" />
+      <workItem from="1744405182668" duration="52000" />
+      <workItem from="1744405354031" duration="472000" />
+      <workItem from="1744406851753" duration="3929000" />
+      <workItem from="1744414042636" duration="7005000" />
+      <workItem from="1744473783843" duration="1529000" />
     </task>
     <task id="LOCAL-00001" summary="update_user template FXML">
       <option name="closed" value="true" />
@@ -172,7 +203,23 @@
       <option name="project" value="LOCAL" />
       <updated>1743684535386</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="complete user">
+      <option name="closed" value="true" />
+      <created>1744319595535</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1744319595535</updated>
+    </task>
+    <task id="LOCAL-00009" summary="complete user">
+      <option name="closed" value="true" />
+      <created>1744319632378</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1744319632379</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,6 +242,7 @@
     <MESSAGE value="User_complete" />
     <MESSAGE value="User_config dim 30/03/25" />
     <MESSAGE value="refonte architecture complète" />
-    <option name="LAST_COMMIT_MESSAGE" value="refonte architecture complète" />
+    <MESSAGE value="complete user" />
+    <option name="LAST_COMMIT_MESSAGE" value="complete user" />
   </component>
 </project>
