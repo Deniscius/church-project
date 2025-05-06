@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.church_project.controllers.SuperAdminDashboardController">
+    <top>
+        <HBox spacing="10" alignment="CENTER" style="-fx-padding: 10;">
+            <Label text="Dashboard Super Admin : Gestion des Utilisateurs" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+        </HBox>
+    </top>
+    <center>
+        <TableView fx:id="usersTable" prefHeight="400" prefWidth="600">
+            <columns>
+                <TableColumn fx:id="colId" text="ID" prefWidth="50"/>
+                <TableColumn fx:id="colUsername" text="Nom d'utilisateur" prefWidth="150"/>
+                <TableColumn fx:id="colNom" text="Nom" prefWidth="150"/>
+                <TableColumn fx:id="colPrenom" text="Prénom" prefWidth="150"/>
+                <TableColumn fx:id="colRole" text="Rôle" prefWidth="100"/>
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <HBox spacing="10" alignment="CENTER" style="-fx-padding: 10;">
+            <Button text="Ajouter" onAction="#handleAddUser"/>
+            <Button text="Modifier" onAction="#handleEditUser"/>
+            <Button text="Supprimer" onAction="#handleDeleteUser"/>
+            <Button text="Actualiser" onAction="#handleRefresh"/>
+        </HBox>
+    </bottom>
+</BorderPane>

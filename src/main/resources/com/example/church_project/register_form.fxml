@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="666.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.church_project.controllers.AuthController">
+
+   <!-- Sidebar bleu -->
+   <VBox prefHeight="464.0" prefWidth="215.0" style="-fx-background-color: #3185FC;" />
+   <Label layoutX="302.0" layoutY="51.0" styleClass="input-label" text="Nom" />
+   <TextField fx:id="nameTextField" layoutX="303.0" layoutY="76.0" prefHeight="26.0" prefWidth="254.0" promptText="Saisissez votre nom" styleClass="text-field" />
+   <Label layoutX="304.0" layoutY="112.0" styleClass="input-label" text="Prénoms" />
+   <TextField fx:id="lastNameTextField" layoutX="304.0" layoutY="135.0" prefHeight="26.0" prefWidth="254.0" promptText="Saisissez votre prénom" styleClass="text-field" />
+
+   <!-- Titre principal -->
+   <Label layoutX="300.0" layoutY="14.0" styleClass="header-title" text="Inscrivez-vous">
+      <font>
+         <Font name="System Bold" size="23.0" />
+      </font>
+   </Label>
+
+   <!-- Section Identifiant -->
+   <Label layoutX="304.0" layoutY="169.0" styleClass="input-label" text="Nom d'utilisateur" />
+   <TextField fx:id="usernameTextField" layoutX="304.0" layoutY="190.0" prefHeight="26.0" prefWidth="254.0" promptText="Saisissez votre identifiant" styleClass="text-field" />
+
+   <!-- Section Mot de passe -->
+   <Label layoutX="304.0" layoutY="221.0" styleClass="input-label" text="Mot de passe" />
+   <PasswordField fx:id="passwordTextField" layoutX="304.0" layoutY="246.0" prefHeight="26.0" prefWidth="254.0" promptText="Saisissez votre mot de passe" styleClass="password-field" />
+
+   <!-- Section inscription -->
+   <Label layoutX="303.0" layoutY="352.0" styleClass="info-text" text="Déjà membre ?" />
+
+   <!-- Bouton de connexion -->
+   <Button layoutX="472.0" layoutY="388.0" mnemonicParsing="false" onAction="#onRegisterButton" styleClass="primary-button" text="Connexion" />
+   <Button layoutX="304.0" layoutY="388.0" mnemonicParsing="false" onAction="#onClearButton" styleClass="primary-button" text="Annuler" />
+   <Hyperlink text="Hyperlink" />
+   <Hyperlink layoutX="455.0" layoutY="349.0" onAction="#onSwitchLogin" text="Connectez-vous" />
+   <Label layoutX="304.0" layoutY="290.0" styleClass="input-label" text="Confirmer votre mot de passe" />
+   <PasswordField fx:id="passwordTextField1" layoutX="304.0" layoutY="311.0" prefHeight="26.0" prefWidth="254.0" promptText="Confirmer votre mot de passe" styleClass="password-field" />
+
+</AnchorPane>
