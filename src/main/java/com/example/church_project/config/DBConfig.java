@@ -5,11 +5,17 @@ import org.slf4j.LoggerFactory;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
+import java.util.stream.Collectors;
 
 public final class DBConfig {
     private static final Logger logger = LoggerFactory.getLogger(DBConfig.class);
-    private static final String DATABASE_NAME = "church_bd";
-    private static final String JDBC_URL = "jdbc:sqlite:" + DATABASE_NAME;
+    private static final String DB_URL = "jdbc:sqlite:church_bd";
+    private static final String INIT_SCRIPT = "/database/init.sql";
+    private static boolean isInitialized = false;
 
     static {
         try {
@@ -24,7 +30,33 @@ public final class DBConfig {
     private DBConfig() {}
 
     public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(JDBC_URL);
+        Connection conn = DriverManager.getConnection(DB_URL);
+        
+        // Initialisation de la base de données
+        initializeDatabase(conn);
+        
+        return conn;
+    }
+
+    private static void initializeDatabase(Connection conn) throws SQLException {
+        try {
+            // Lecture du script d'initialisation
+            String initScript = new BufferedReader(
+                new InputStreamReader(DBConfig.class.getResourceAsStream(INIT_SCRIPT), StandardCharsets.UTF_8)
+            ).lines().collect(Collectors.joining("\n"));
+
+            // Exécution du script
+            try (Statement stmt = conn.createStatement()) {
+                for (String command : initScript.split(";")) {
+                    if (!command.trim().isEmpty()) {
+                        stmt.execute(command);
+                    }
+                }
+            }
+        } catch (Exception e) {
+            System.err.println("Erreur lors de l'initialisation : " + e.getMessage());
+            throw new SQLException("Erreur lors de l'initialisation de la base de données", e);
+        }
     }
 
     public static boolean testConnection() {

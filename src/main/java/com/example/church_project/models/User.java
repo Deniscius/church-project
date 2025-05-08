@@ -7,8 +7,11 @@ public class User {
     private String usernameUser;
     private String passwordUser;
     private Role role;
+    private boolean state;
 
-    public User() {}
+    public User() {
+        this.state = true; // Par défaut, l'utilisateur est actif
+    }
 
     // Constructeur pour l'inscription standard
     public User(String usernameUser, String passwordUser, String nomUser, String prenomUser) {
@@ -22,6 +25,7 @@ public class User {
         this.nomUser = nomUser;
         this.prenomUser = prenomUser;
         this.role = role;
+        this.state = true;
     }
 
     public User(int idUser, String usernameUser, String passwordUser,
@@ -32,10 +36,19 @@ public class User {
         this.nomUser = nomUser;
         this.prenomUser = prenomUser;
         this.role = role;
+        this.state = true;
     }
 
-
-
+    public User(int idUser, String usernameUser, String passwordUser,
+                String nomUser, String prenomUser, Role role, boolean state) {
+        this.idUser = idUser;
+        this.usernameUser = usernameUser;
+        this.passwordUser = passwordUser;
+        this.nomUser = nomUser;
+        this.prenomUser = prenomUser;
+        this.role = role;
+        this.state = state;
+    }
 
     public int getIdUser() {
         return idUser;
@@ -86,6 +99,14 @@ public class User {
         this.role = role;
     }
 
+    public boolean isState() {
+        return state;
+    }
+
+    public void setState(boolean state) {
+        this.state = state;
+    }
+
     public boolean hasRole(Role roleToCheck) {
         return this.role == roleToCheck;
     }
@@ -98,7 +119,7 @@ public class User {
                 ", prenomUser='" + prenomUser + '\'' +
                 ", usernameUser='" + usernameUser + '\'' +
                 ", role=" + role +
+                ", state=" + state +
                 '}';
     }
-
 }

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label text="Bienvenue dans le Tableau de Bord">
+        <font>
+            <Font name="System Bold" size="24.0" />
+        </font>
+    </Label>
+
+    <Label text="Sélectionnez une option dans le menu de gauche pour commencer">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Label>
+
+    <VBox spacing="10.0">
+        <Label text="Fonctionnalités disponibles :">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+        <Label text="• Gestion des produits" />
+        <Label text="• Gestion des catégories" />
+        <Label text="• Suivi des ventes" />
+        <Label text="• Statistiques" />
+        <Label text="• Paramètres" />
+        <Label text="• Gestion des utilisateurs" />
+    </VBox>
+</VBox> 

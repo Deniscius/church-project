@@ -4,7 +4,10 @@ import com.example.church_project.database.DatabaseInitializer;
 
 public class AppBase {
     public static void main(String[] args) {
+        // Initialisation de la base de données
         new DatabaseInitializer().seedEssentialData();
-        HelloApplication.main(args);
+        
+        // Lancement de l'application principale
+        ChurchApplication.main(args);
     }
 }

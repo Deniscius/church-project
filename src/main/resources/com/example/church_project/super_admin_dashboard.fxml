@@ -2,30 +2,49 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
 
-<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.church_project.controllers.SuperAdminDashboardController">
-    <top>
-        <HBox spacing="10" alignment="CENTER" style="-fx-padding: 10;">
-            <Label text="Dashboard Super Admin : Gestion des Utilisateurs" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
-        </HBox>
-    </top>
-    <center>
-        <TableView fx:id="usersTable" prefHeight="400" prefWidth="600">
-            <columns>
-                <TableColumn fx:id="colId" text="ID" prefWidth="50"/>
-                <TableColumn fx:id="colUsername" text="Nom d'utilisateur" prefWidth="150"/>
-                <TableColumn fx:id="colNom" text="Nom" prefWidth="150"/>
-                <TableColumn fx:id="colPrenom" text="Prénom" prefWidth="150"/>
-                <TableColumn fx:id="colRole" text="Rôle" prefWidth="100"/>
-            </columns>
-        </TableView>
-    </center>
-    <bottom>
-        <HBox spacing="10" alignment="CENTER" style="-fx-padding: 10;">
-            <Button text="Ajouter" onAction="#handleAddUser"/>
-            <Button text="Modifier" onAction="#handleEditUser"/>
-            <Button text="Supprimer" onAction="#handleDeleteUser"/>
-            <Button text="Actualiser" onAction="#handleRefresh"/>
-        </HBox>
-    </bottom>
-</BorderPane>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.church_project.controllers.SuperAdminDashboardController"
+      spacing="10"
+      style="-fx-background-color: white;">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- En-tête avec titre et bouton de déconnexion -->
+    <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-padding: 0 0 20 0;">
+        <Label fx:id="titleLabel" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button fx:id="logoutButton" text="Déconnexion" onAction="#handleLogout"
+                style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 20; -fx-background-radius: 5;"/>
+    </HBox>
+
+    <!-- Table des utilisateurs -->
+    <TableView fx:id="usersTable" VBox.vgrow="ALWAYS" style="-fx-background-color: white; -fx-border-color: #ecf0f1; -fx-border-radius: 5;">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="50" style="-fx-alignment: CENTER;"/>
+            <TableColumn fx:id="colUsername" text="Nom d'utilisateur" prefWidth="150"/>
+            <TableColumn fx:id="colNom" text="Nom" prefWidth="150"/>
+            <TableColumn fx:id="colPrenom" text="Prénom" prefWidth="150"/>
+            <TableColumn fx:id="colRole" text="Rôle" prefWidth="100"/>
+            <TableColumn fx:id="colState" text="État" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <!-- Barre d'outils avec les boutons d'action -->
+    <HBox spacing="15" alignment="CENTER_LEFT" style="-fx-padding: 20 0 0 0;">
+        <Button fx:id="addButton" onAction="#handleAddUser" text="Ajouter" 
+                style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 20; -fx-background-radius: 5;"/>
+        <Button fx:id="editButton" onAction="#handleEditUser" text="Modifier" 
+                style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 20; -fx-background-radius: 5;"/>
+        <Button fx:id="deleteButton" onAction="#handleDeleteUser" text="Supprimer" 
+                style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 20; -fx-background-radius: 5;"/>
+        <Button fx:id="toggleStateButton" onAction="#handleToggleState" text="Changer État" 
+                style="-fx-background-color: #f39c12; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 20; -fx-background-radius: 5;"/>
+        <Button fx:id="refreshButton" onAction="#handleRefresh" text="Actualiser" 
+                style="-fx-background-color: #7f8c8d; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 20; -fx-background-radius: 5;"/>
+    </HBox>
+
+</VBox>

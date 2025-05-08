@@ -17,7 +17,7 @@ public class DatabaseInitializer {
     private final RoleService roleService;
 
     public DatabaseInitializer() {
-        this.authService = new AuthService();
+        this.authService = AuthService.getInstance();
         this.roleService = new RoleService();
     }
 
@@ -28,11 +28,10 @@ public class DatabaseInitializer {
             if (!authService.userExists(SUPERADMIN_USERNAME)) {
                 User superAdmin = new User(
                         SUPERADMIN_USERNAME,
-                        SUPERADMIN_PASSWORD, // On passe le mot de passe BRUT
+                        SUPERADMIN_PASSWORD,
                         SUPERADMIN_NOM,
                         SUPERADMIN_PRENOM,
-                        Role.SUPER_ADMIN
-                );
+                        Role.SUPER_ADMIN);
 
                 if (authService.register(superAdmin)) {
                     System.out.println("Super admin créé avec succès");

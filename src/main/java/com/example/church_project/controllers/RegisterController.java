@@ -15,7 +15,7 @@ public class RegisterController {
     @FXML private PasswordField passwordTextField;
     @FXML private TextField usernameTextField;
 
-    private final AuthService authService = new AuthService();
+    private final AuthService authService = AuthService.getInstance();
 
     @FXML
     private void onRegisterButton() {

@@ -1,0 +1,123 @@
+/* Styles globaux */
+.root {
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+    -fx-background-color: #f5f6fa;
+}
+
+/* Styles des boutons */
+.button {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2);
+}
+
+.button:hover {
+    -fx-opacity: 0.9;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 15, 0, 0, 3);
+}
+
+/* Styles de la table */
+.table-view {
+    -fx-background-color: white;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-border-color: #dcdde1;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+}
+
+.table-view .column-header {
+    -fx-background-color: #f1f2f6;
+    -fx-font-weight: bold;
+    -fx-padding: 10;
+}
+
+.table-view .table-row-cell {
+    -fx-border-color: transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: #f8f9fa;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: #e3f2fd;
+}
+
+/* Styles des labels */
+.label {
+    -fx-font-size: 14px;
+}
+
+.title-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+/* Styles des conteneurs */
+.vbox, .hbox {
+    -fx-spacing: 10;
+    -fx-padding: 20;
+}
+
+/* Styles des champs de texte */
+.text-field {
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-padding: 8;
+    -fx-font-size: 14px;
+}
+
+/* Styles des alertes */
+.dialog-pane {
+    -fx-background-color: white;
+    -fx-background-radius: 5;
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: #f1f2f6;
+}
+
+.dialog-pane .button-bar .button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+}
+
+.dialog-pane .button-bar .button:hover {
+    -fx-background-color: #2980b9;
+}
+
+/* Styles des boutons spécifiques */
+#logoutButton {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+}
+
+#addButton {
+    -fx-background-color: #2ecc71;
+    -fx-text-fill: white;
+}
+
+#editButton {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+}
+
+#deleteButton {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+}
+
+#toggleStateButton {
+    -fx-background-color: #f39c12;
+    -fx-text-fill: white;
+}
+
+#refreshButton {
+    -fx-background-color: #7f8c8d;
+    -fx-text-fill: white;
+} 
